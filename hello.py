@@ -4,4 +4,5 @@
 
 def main():
     print("Hello, Introctor")
+    print("Good-bye")
 main()

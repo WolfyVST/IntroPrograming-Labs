@@ -24,15 +24,16 @@ if respuesta=="yes"or respuesta=="Yes":
         if respuesta4 == "yes" or "Yes":
            cartafinaljug = cartafinaljug + random.randrange(1, 11)
            print("la suma de sus cartas es", cartafinaljug)
- if cartfinaldel < 14:
+ else:
+  if cartfinaldel < 14:
   cartfinaldel = cartfinaldel + random.randrange(1 , 11)
- if cartfinaldel > 21:
+  if cartfinaldel > 21:
      print ("you have won dealer got busted")
- if cartfinaldel == 21:
+  if cartfinaldel == 21:
      print("the dealer has won he got a black jack")
- if cartfinaldel > cartafinaljug:
+  if cartfinaldel > cartafinaljug:
      print("The dealer has won hes got: ",cartfinaldel,"and you have: ",cartafinaljug)
- if cartafinaljug > cartfinaldel:
+  if cartafinaljug > cartfinaldel:
      print("You have won you got: ",cartafinaljug,"and the dealer has: ",cartfinaldel)
 else:
     print("thanks for playing")

@@ -7,6 +7,11 @@ cartadel1=random.randrange(1,11)
 cartadel2=random.randrange(1,11)
 cartfinaldel=cartadel1+cartadel2
 cartafinaljug=cartjug1+cartjug2
+
+cards = []
+cards.append(4)
+sum(cards)
+
 # el mero juego
 respuesta=input("Do you want to play baclk jack ")
 if respuesta=="yes"or respuesta=="Yes":
@@ -20,7 +25,7 @@ if respuesta=="yes"or respuesta=="Yes":
      if respuesta3 == "yes" or "Yes":
         cartafinaljug = cartafinaljug + random.randrange(1, 11)
         print("la suma de sus cartas es", cartafinaljug)
-        respuesta4=input("Would you like another card")
+        respuesta4=input("Would you like another card").lower()
         if respuesta4 == "yes" or "Yes":
            cartafinaljug = cartafinaljug + random.randrange(1, 11)
            print("la suma de sus cartas es", cartafinaljug)

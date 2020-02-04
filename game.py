@@ -8,37 +8,36 @@ cartadel2=random.randrange(1,11)
 cartfinaldel=cartadel1+cartadel2
 cartafinaljug=cartjug1+cartjug2
 
-cards = []
-cards.append(4)
-sum(cards)
+#cards = []
+#cards.append(4)
+#sum(cards)
 
 # el mero juego
-respuesta=input("Do you want to play baclk jack ")
-if respuesta=="yes"or respuesta=="Yes":
+respuesta=input("Do you want to play baclk jack ").lower()
+while respuesta=="yes":
  print("sus cartas son",cartjug1,cartjug2)
  print("las cartas del dealer son:",cartadel1,"??")
- respuesta2 = input("Would you like another card?")
- if respuesta2 == "yes" or respuesta2=="Yes":
+ respuesta2 = input("Would you like another card?").lower()
+ while respuesta2 == "yes":
      cartafinaljug=cartafinaljug+random.randrange(1,11)
      print("la suma de sus cartas es",cartafinaljug)
-     respuesta3=input("Would you like another card")
-     if respuesta3 == "yes" or "Yes":
-        cartafinaljug = cartafinaljug + random.randrange(1, 11)
-        print("la suma de sus cartas es", cartafinaljug)
-        respuesta4=input("Would you like another card").lower()
-        if respuesta4 == "yes" or "Yes":
-           cartafinaljug = cartafinaljug + random.randrange(1, 11)
-           print("la suma de sus cartas es", cartafinaljug)
- else:
-  if cartfinaldel < 14:
-  cartfinaldel = cartfinaldel + random.randrange(1 , 11)
-  if cartfinaldel > 21:
+     respuesta2=input("Would you like another card")
+ if cartafinaljug > 21:
+     print("The dealer has won you got busted")
+     respuesta="no"
+ if cartfinaldel < 16:
+   cartfinaldel = cartfinaldel + random.randrange(1 , 11)
+ if cartfinaldel > 21:
      print ("you have won dealer got busted")
-  if cartfinaldel == 21:
+     respuesta="no"
+ if cartfinaldel == 21:
      print("the dealer has won he got a black jack")
-  if cartfinaldel > cartafinaljug:
+     respuesta="no"
+ if cartfinaldel > cartafinaljug:
      print("The dealer has won hes got: ",cartfinaldel,"and you have: ",cartafinaljug)
-  if cartafinaljug > cartfinaldel:
+     respuesta="no"
+ if cartafinaljug > cartfinaldel:
      print("You have won you got: ",cartafinaljug,"and the dealer has: ",cartfinaldel)
+     respuesta="no"
 else:
-    print("thanks for playing")
+ print("thanks for playing")

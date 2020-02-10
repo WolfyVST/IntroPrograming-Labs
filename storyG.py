@@ -22,5 +22,4 @@ while respuesta == "yes":
                    "and lastly the Dagger's of the best assasins past downs for generations").lower()
     if weapon == "sword":
         print("you have chose the sword great hero")
-        equipment = sword
-    if
+        equipment = sword;

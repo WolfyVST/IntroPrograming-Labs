@@ -38,6 +38,8 @@ while respuesta=="yes":
      respuesta="no"
  if cartafinaljug > cartfinaldel:
      print("You have won you got: ",cartafinaljug,"and the dealer has: ",cartfinaldel)
-     respuesta="no"
+ respuesta= input("do you want to play again")
+
+
 else:
  print("thanks for playing")

@@ -4,8 +4,8 @@ print("Try guessing the animal, the animal is know as the king of the jungle!")
 awnser1 = input("ready?").lower()
 while awnser1 == "yes" :
     awnser2 = input("whats your guess?").lower()
-    if awnser2== "quit":
-        awnser1 = "no"
+    if awnser2[0] == "q":
+       awnser1 = "no"
     elif awnser2 == guess :
         print("well done, your a genius thanks for playing")
         awnser1 = "no"

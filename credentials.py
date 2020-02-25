@@ -3,8 +3,8 @@
 # Author: Ricardo Villalobos
 # Created: 2/24/2020
 def fistlast():
-    first = input("Enter your first name: ")
-    last = input("Enter your last name: ")
+    first = input("Enter your first name: ").lower()
+    last = input("Enter your last name: ").lower()
     uname = first + "." + last
     return uname
 def passwrd():
@@ -19,11 +19,25 @@ def passwrd():
         if len(passwd) >= 8:
             characters = True
     return passwd
+def checkstrenght():
+    strength = False
+    pasword=passwrd()
+    if pasword == pasword.lower():
+        strength = False
+    elif pasword == pasword.upper():
+        strength = False
+    else:
+        strenght = True
+    return strength
+
 
 def main():
-# get user's first and last names
  uname = fistlast()
- password = passwrd()
- print("The force is strong in this one…")
+ strength = checkstrenght()
+ if strength == True:
+     print("your pasword is verry string ")
+ else:
+     print("your pasword isnt that strong")
+ #print("The force is strong in this one…")
  print("Account configured. Your new email address is",uname + "@marist.edu")
 main()

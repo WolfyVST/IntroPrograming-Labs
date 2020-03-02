@@ -9,15 +9,17 @@ def confirmColor():
     userconfirm = input("You have entered "+ confirm + " Is this correct (Y/N)").upper()
     if userconfirm == "Y":
         return True
-def containsElement(it):
-    for color in colors[]:
-        if it == color :
+def containsElement(colors2):
+    it= 0
+    for color in colors[it]:
+        if colors2 == color :
             return True
+        it = it + 1
     return False
 def praiseUser():
     pass
 def rediculeUser():
     pass
 def main():
-    it = 0
     showtitle()
+

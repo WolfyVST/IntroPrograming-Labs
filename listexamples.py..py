@@ -1,11 +1,10 @@
-colors = [""]
+colors = ["RED","BLUE","YELLOW"]
 def showtitle():
     print("Color Preference Evaluator?")
 def promptForColor():
     color = input(" Please enter a color").upper()
     return color
-def confirmColor():
-    confirm = promptForColor()
+def confirmColor(confirm ):
     userconfirm = input("You have entered "+ confirm + " Is this correct (Y/N)").upper()
     if userconfirm == "Y":
         return True
@@ -17,9 +16,25 @@ def containsElement(colors2):
         it = it + 1
     return False
 def praiseUser():
-    pass
+    print("well done ")
 def rediculeUser():
-    pass
+    print("what a terrible color!!")
 def main():
     showtitle()
+    ready = input("Are you ready?")
+    while ready == "yes":
+        color = promptForColor()
+        cont=confirmColor(color)
+        if cont == True:
+            next = confirmColor(color)
+            if next == True:
+                praiseUser()
+            else:
+                rediculeUser()
+    print("thanks for participating")
+
+main()
+
+
+
 

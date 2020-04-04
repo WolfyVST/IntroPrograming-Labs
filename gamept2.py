@@ -145,7 +145,7 @@ def main():
             print("we have everything we should go to the church and rest")
             go = "no"
         showpla(places2, score)
-    print("You have won! Please play again!!!")
+    print("You have won! Please play again!!")
 
 
 main()

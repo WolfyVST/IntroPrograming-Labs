@@ -115,24 +115,29 @@ def main():
         plaaction = int(action2) - 1
         places2 = places[plaaction]
         if places2 == places[0]:
-
+            print("your in: ", LocNames[plaaction] ,"your score ir: ", score)
             townhall()
             score = score + 20
             goal = goal + 1
         if places2 == places[1]:
+            print("your in: ", LocNames[plaaction], "your score ir: ", score)
             park()
             score = score + 10
         elif places2 == places[2]:
+            print("your in: ", LocNames[plaaction], "your score ir: ", score)
             marketplace()
             score = score + 10
         elif places2 == places[3]:
+            print("your in: ", LocNames[plaaction], "your score ir: ", score)
             blacksmith()
             score = score + 20
             goal = goal + 1
         elif places2 == places[4]:
+            print("your in: ", LocNames[plaaction], "your score ir: ", score)
             guildhall()
             score = score + 10
         elif places2 == places[5]:
+            print("your in: ", LocNames[plaaction], "your score ir: ", score)
             church()
             score = score + 20
             goal = goal + 1

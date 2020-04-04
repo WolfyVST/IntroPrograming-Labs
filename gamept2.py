@@ -1,7 +1,7 @@
 from typing import List
 
 places: List[str] = [" town hall-1 ", " park-2 ", " market place-3 ", " blacksmith-4 ", " Guild hall-5 ", " church-6 "]
-
+LocNames = ["The Town hall", "the park","Marketplace","The blacksmith","The guild hall","the church"]
 
 def costumization():
     print("")
@@ -115,6 +115,7 @@ def main():
         plaaction = int(action2) - 1
         places2 = places[plaaction]
         if places2 == places[0]:
+
             townhall()
             score = score + 20
             goal = goal + 1

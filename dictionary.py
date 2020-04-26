@@ -6,7 +6,14 @@ def main():
     print("Please enter finals name: ")
     filename = input()
     if filename == "dictionary":
-        f = open("dictionary.txt", "r")
-        print(f.readline())
-        f.close()
+        with open("dictionary.txt", "r") as f:
+            searchitem = input("Please enter the word your looking for: ")
+            lines = f.readlines()
+            for i in range(0 ,len(lines)):
+                line = lines[i]
+                if searchitem == line.rstrip('\n') :
+                    print(lines[i+1])
+    f.close()
+    else:
+        print()
 main()

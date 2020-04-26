@@ -9,3 +9,4 @@ def main():
         f = open("dictionary.txt", "r")
         print(f.readline())
         f.close()
+main()

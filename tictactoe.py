@@ -16,7 +16,19 @@ def printBoard(board):
  print("+-----------+")
 
 def markBoard(board, row, col, player):
-  # check to see whether the desired square is blank
+ if player == 1:
+  print("where do you want to check?")
+  colum = input("what columb?")
+  roww = input("what row?")
+  if board[colum:roww] == "":
+   board[colum:roww] = "x"
+ elif player == 2:
+  print("where do you want to check?")
+  colum = input("what columb?")
+  roww = input("what row?")
+  if board[colum:roww] == "":
+   board[colum:roww] = "O"
+  # check to see whet:her the desired square is blank
   # if so, set it to the player number
  pass
 def getPlayerMove():
@@ -41,10 +53,12 @@ def hasBlanks(board):
 
 
 def main():
- board = []
+ board = [[symbol[0],symbol[0],symbol[0]]
+  ,[symbol[0],symbol[0],symbol[0]],[symbol[0],symbol[0],symbol[0]]]
  player = 1
- while hasBlanks(board):
-    printBoard(board)
+ printing = hasBlanks(board)
+ if printing == True:
+  printBoard(board)
  row, col = getPlayerMove()
  markBoard(board, row, col, player)
  player = player % 2 + 1  # switch player for next turn

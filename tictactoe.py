@@ -26,7 +26,7 @@ def markBoard(board, row, col, player):
   print("where do you want to check?")
   colum = input("what columb?")
   roww = input("what row?")
-  if board[colum:roww] == "":
+  if board[colum:roww] == " ":
    board[colum:roww] = "O"
   # check to see whet:her the desired square is blank
   # if so, set it to the player number
@@ -53,6 +53,7 @@ def hasBlanks(board):
 
 
 def main():
+ symbol = [" ", "x", "o"]
  board = [[symbol[0],symbol[0],symbol[0]]
   ,[symbol[0],symbol[0],symbol[0]],[symbol[0],symbol[0],symbol[0]]]
  player = 1

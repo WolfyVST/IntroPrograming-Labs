@@ -10,17 +10,12 @@ for s in suit:
 deck = Deck.Deck(completedeck)
 deck.Shuffle()
 flag = True
-while flag == True:
-    awsnser = input("do you want a card").lower()
-    i = 0
+i = 0
+
+while flag is True:
+    awsnser = input("do you want a card: ").lower()
     if awsnser == "yes":
-        print(deck.draw(i))
+        deck.draw(i)
         i = i + 1
     else:
         flag = False
-
-
-
-
-#for val in completedeck:
-    #print(val.getSuit()+val.getRank())
